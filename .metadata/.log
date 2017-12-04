@@ -1,0 +1,45 @@
+!SESSION 2017-12-04 17:11:39.032 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -data .
+
+!ENTRY org.eclipse.ui.browser 2 0 2017-12-04 17:37:55.111
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2017-12-04 17:46:16.282 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -data file:/home/etudiant/Bureau/tps/tp4/
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 17:49:35.256
+!MESSAGE Indexed 'Source' (0 sources, 0 headers) in 0,013 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 17:50:05.576
+!MESSAGE Indexed 'Testeur' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 17:50:26.503
+!MESSAGE Indexed 'Utilisation' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 17:57:54.867
+!MESSAGE Indexed 'Source' (8 sources, 165 headers) in 5,04 sec: 14 547 declarations; 25 668 references; 0 unresolved inclusions; 4 syntax errors; 56 unresolved names (0,14 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 17:58:01.131
+!MESSAGE Indexed 'Utilisation' (1 sources, 168 headers) in 4 sec: 14 831 declarations; 26 141 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,046 %)
+!SESSION 2017-12-04 18:07:28.895 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -data .
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 18:14:41.159
+!MESSAGE Indexed 'Source' (8 sources, 165 headers) in 8,26 sec: 14 547 declarations; 25 668 references; 0 unresolved inclusions; 4 syntax errors; 56 unresolved names (0,14 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-04 18:14:53.098
+!MESSAGE Indexed 'Testeur' (5 sources, 239 headers) in 11,8 sec: 40 265 declarations; 57 505 references; 0 unresolved inclusions; 4 syntax errors; 19 unresolved names (0,019 %)
