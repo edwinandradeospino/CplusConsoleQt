@@ -1,9 +1,20 @@
-18:15:03 **** Incremental Build of configuration Debug for project Testeur ****
+21:19:29 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -Idebug -I. -o debug/formulaire.o formulaire.cpp
+g++  -o Formulaire debug/main.o debug/formulaire.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+
+21:19:33 Build Finished (took 4s.168ms)
+
+21:19:33 **** Incremental Build of configuration Debug for project Source ****
 make all 
 make: rien à faire pour « all ».
-18:15:07 **** Incremental Build of configuration Debug for project Testeur ****
+21:19:34 **** Incremental Build of configuration Debug for project Testeur ****
 make all 
 make: rien à faire pour « all ».
-18:16:03 **** Incremental Build of configuration Debug for project Testeur ****
+21:19:34 **** Incremental Build of configuration Debug for project Utilisation ****
 make all 
 make: rien à faire pour « all ».
