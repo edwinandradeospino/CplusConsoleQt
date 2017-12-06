@@ -34,11 +34,9 @@
 			</target>
 		</buildTargets>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
-		<pathentry kind="src" path=""/>
-		<pathentry kind="out" path=""/>
-		<pathentry kind="prj" path="/Source"/>
-		<pathentry kind="con" path="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO"/>
 		<pathentry base-path="/usr/include/qt4" include="" kind="inc" path="" system="true"/>
 		<pathentry base-path="/usr/include/qt4" include="QtOpenGL" kind="inc" path="" system="true"/>
 		<pathentry base-path="/usr/include/qt4" include="QtWebKit" kind="inc" path="" system="true"/>
@@ -60,6 +58,9 @@
 		<pathentry base-path="/usr/include/qt4" include="phonon" kind="inc" path="" system="true"/>
 		<pathentry base-path="/usr/include/qt4" include="QtNetwork" kind="inc" path="" system="true"/>
 		<pathentry base-path="/usr/include/qt4" include="QtTest" kind="inc" path="" system="true"/>
+		<pathentry kind="src" path=""/>
+		<pathentry kind="out" path=""/>
+		<pathentry kind="prj" path="/Source"/>
+		<pathentry kind="con" path="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO"/>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

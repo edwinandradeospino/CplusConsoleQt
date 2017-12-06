@@ -108,7 +108,7 @@ std::string Candidat::partiPolitiqueString() const {
 
 
 void Candidat::verifieInvariants() const {
-	INVARIANT(!m_prenom.empty()); //CAMBIAR EL ARGUMENT DE ENTRADA
+	INVARIANT(!m_prenom.empty());
 }
 /**
  * \brief retourne l'object courrant cloné vers le lick de la mémoire.

@@ -1,14 +1,14 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'formulaire.h'
+** Meta object code from reading C++ file 'candidatinscriptions.h'
 **
 ** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../formulaire.h"
+#include "../candidatinscriptions.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'formulaire.h' doesn't include <QObject>."
+#error "The header file 'candidatinscriptions.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
 #error "This file was generated using the moc from 4.8.7. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -16,7 +16,7 @@
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-static const uint qt_meta_data_Formulaire[] = {
+static const uint qt_meta_data_CandidatInscriptions[] = {
 
  // content:
        6,       // revision
@@ -30,57 +30,57 @@ static const uint qt_meta_data_Formulaire[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      12,   11,   11,   11, 0x08,
+      22,   21,   21,   21, 0x08,
 
        0        // eod
 };
 
-static const char qt_meta_stringdata_Formulaire[] = {
-    "Formulaire\0\0dialogCandidat()\0"
+static const char qt_meta_stringdata_CandidatInscriptions[] = {
+    "CandidatInscriptions\0\0validerCandidat()\0"
 };
 
-void Formulaire::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CandidatInscriptions::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Q_ASSERT(staticMetaObject.cast(_o));
-        Formulaire *_t = static_cast<Formulaire *>(_o);
+        CandidatInscriptions *_t = static_cast<CandidatInscriptions *>(_o);
         switch (_id) {
-        case 0: _t->dialogCandidat(); break;
+        case 0: _t->validerCandidat(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-const QMetaObjectExtraData Formulaire::staticMetaObjectExtraData = {
+const QMetaObjectExtraData CandidatInscriptions::staticMetaObjectExtraData = {
     0,  qt_static_metacall 
 };
 
-const QMetaObject Formulaire::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_Formulaire,
-      qt_meta_data_Formulaire, &staticMetaObjectExtraData }
+const QMetaObject CandidatInscriptions::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_CandidatInscriptions,
+      qt_meta_data_CandidatInscriptions, &staticMetaObjectExtraData }
 };
 
 #ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &Formulaire::getStaticMetaObject() { return staticMetaObject; }
+const QMetaObject &CandidatInscriptions::getStaticMetaObject() { return staticMetaObject; }
 #endif //Q_NO_DATA_RELOCATION
 
-const QMetaObject *Formulaire::metaObject() const
+const QMetaObject *CandidatInscriptions::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
-void *Formulaire::qt_metacast(const char *_clname)
+void *CandidatInscriptions::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_Formulaire))
-        return static_cast<void*>(const_cast< Formulaire*>(this));
-    return QMainWindow::qt_metacast(_clname);
+    if (!strcmp(_clname, qt_meta_stringdata_CandidatInscriptions))
+        return static_cast<void*>(const_cast< CandidatInscriptions*>(this));
+    return QDialog::qt_metacast(_clname);
 }
 
-int Formulaire::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CandidatInscriptions::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QMainWindow::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
