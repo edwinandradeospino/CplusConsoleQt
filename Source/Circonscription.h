@@ -1,6 +1,6 @@
 /*
  * Circonscription.h
- *
+ **
  *  Created on: 2017-11-20
  *      Author: etudiant
  */
@@ -21,11 +21,14 @@ public:
 	Candidat reqDeputeElu() const;
 	std::string reqCirconscriptionFormate() const;
 	void inscrire(const Personne& p_nouvelInscrit);
+	void desinscrire(const std::string& p_nas);
+	bool personneEstDejaPresente(const std::string& p_nas)const;
 
 private:
 	std::string m_nom;
 	Candidat m_deputeElu;
 	std::vector <Personne*> m_vInscrits;
+	const Circonscription operator=(const Circonscription& p_circonscription);
 
 };
 
