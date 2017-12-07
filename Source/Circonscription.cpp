@@ -103,13 +103,11 @@ void Circonscription::inscrire(const Personne& p_nouvelInscrit) {
 	try{
 		if(personneEstDejaPresente(p_nouvelInscrit.reqNas()))
 		{
-			cout<<"avant le throw"<<endl;
 		    throw PersonneDejaPresentException(p_nouvelInscrit.reqPersonneFormate());
-		    cout<<"apres le throw"<<endl;
 		}
 		m_vInscrits.push_back(p_nouvelInscrit.clone());
 	}
-	catch(elections::PersonneDejaPresentException& e) {cout<<"dans le catch"<<endl;}
+	catch(elections::PersonneDejaPresentException& e) {}
 }
 
 void Circonscription::desinscrire(const std::string& p_nas)
