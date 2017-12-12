@@ -3,6 +3,9 @@
 
 #include <QtGui/QDialog>
 #include "ui_candidatinscriptions.h"
+#include "Date.h"
+#include "Adresse.h"
+
 
 class CandidatInscriptions : public QDialog
 {
@@ -14,10 +17,16 @@ public:
     QString reqNom() const;
     QString reqPrenom() const;
     QString reqNas() const;
-    QString reqDateDeNaissance() const;
-    QString reqAdresse() const;
-    QString reqPartiPolitique() const;
+    util::Date reqDateNaissance() const;
+    util::Adresse reqAdresseqt() const;
+    int numeroCivique() const;
+    std::string reqRue() const;
+    std::string reqCodePostal() const;
+    std::string reqVille() const;
+    std::string reqProvince() const;
+    int reqPartiPolitique() const;
 
+    //void ajouterCandidat();
 
 
 private slots:
@@ -25,6 +34,7 @@ private slots:
 
 private:
     Ui::CandidatInscriptionsClass ui;
+    util::Date m_dateNaissance;
 
 };
 

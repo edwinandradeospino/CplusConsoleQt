@@ -19,6 +19,8 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QPushButton>
 #include <QtGui/QStatusBar>
+#include <QtGui/QTableWidget>
+#include <QtGui/QTextBrowser>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,6 +36,8 @@ public:
     QAction *actionDesinscription_d_une_Personne;
     QWidget *centralwidget;
     QPushButton *pushButton;
+    QTableWidget *tableWidget;
+    QTextBrowser *textBrowser;
     QMenuBar *menubar;
     QMenu *menuMenu;
     QStatusBar *statusbar;
@@ -42,7 +46,7 @@ public:
     {
         if (FormulaireClass->objectName().isEmpty())
             FormulaireClass->setObjectName(QString::fromUtf8("FormulaireClass"));
-        FormulaireClass->resize(678, 387);
+        FormulaireClass->resize(767, 387);
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -141,11 +145,31 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(590, 300, 85, 27));
+        pushButton->setGeometry(QRect(670, 290, 85, 27));
+        tableWidget = new QTableWidget(centralwidget);
+        if (tableWidget->columnCount() < 3)
+            tableWidget->setColumnCount(3);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        __qtablewidgetitem->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        __qtablewidgetitem1->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        __qtablewidgetitem2->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
+        tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        tableWidget->setGeometry(QRect(30, 20, 571, 301));
+        tableWidget->setAlternatingRowColors(true);
+        tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setGeometry(QRect(610, 20, 151, 171));
         FormulaireClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(FormulaireClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 678, 30));
+        menubar->setGeometry(QRect(0, 0, 767, 30));
         menuMenu = new QMenu(menubar);
         menuMenu->setObjectName(QString::fromUtf8("menuMenu"));
         FormulaireClass->setMenuBar(menubar);
@@ -164,6 +188,7 @@ public:
         menuMenu->addAction(actionQuitter);
 
         retranslateUi(FormulaireClass);
+        QObject::connect(tableWidget, SIGNAL(cellClicked(int,int)), FormulaireClass, SLOT(selectionLineTable()));
 
         QMetaObject::connectSlotsByName(FormulaireClass);
     } // setupUi
@@ -178,6 +203,12 @@ public:
         actionInscription_d_un_Electeur->setText(QApplication::translate("FormulaireClass", "Inscription d'un Electeur", 0, QApplication::UnicodeUTF8));
         actionDesinscription_d_une_Personne->setText(QApplication::translate("FormulaireClass", "Desinscription d'une Personne", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("FormulaireClass", "Quitter", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("FormulaireClass", "Nom", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("FormulaireClass", "Prenom", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
+        ___qtablewidgetitem2->setText(QApplication::translate("FormulaireClass", "Adresse", 0, QApplication::UnicodeUTF8));
         menuMenu->setTitle(QApplication::translate("FormulaireClass", "Operations", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

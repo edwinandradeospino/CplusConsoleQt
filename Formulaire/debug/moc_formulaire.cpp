@@ -22,7 +22,7 @@ static const uint qt_meta_data_Formulaire[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -31,12 +31,15 @@ static const uint qt_meta_data_Formulaire[] = {
 
  // slots: signature, parameters, type, tag, flags
       12,   11,   11,   11, 0x08,
+      36,   11,   11,   11, 0x08,
+      57,   11,   11,   11, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Formulaire[] = {
-    "Formulaire\0\0dialogCandidat()\0"
+    "Formulaire\0\0dialogAjouterCandidat()\0"
+    "selectionLineTable()\0supprimerCandidat()\0"
 };
 
 void Formulaire::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -45,7 +48,9 @@ void Formulaire::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_ASSERT(staticMetaObject.cast(_o));
         Formulaire *_t = static_cast<Formulaire *>(_o);
         switch (_id) {
-        case 0: _t->dialogCandidat(); break;
+        case 0: _t->dialogAjouterCandidat(); break;
+        case 1: _t->selectionLineTable(); break;
+        case 2: _t->supprimerCandidat(); break;
         default: ;
         }
     }
@@ -84,9 +89,9 @@ int Formulaire::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

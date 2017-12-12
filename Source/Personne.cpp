@@ -39,6 +39,7 @@ Personne::Personne(const std::string& p_nas,
 :m_nas(p_nas), m_prenom(p_prenom), m_nom(p_nom),
  m_dateNaissance(p_dateNaissance), m_adresse(p_adresse)
 {
+
 	PRECONDITION(util::validerNas(p_nas));
 	PRECONDITION(!p_prenom.empty());
 	PRECONDITION(!p_nom.empty());
@@ -47,6 +48,7 @@ Personne::Personne(const std::string& p_nas,
 	POSTCONDITION(m_prenom == p_prenom);
 	POSTCONDITION(m_nom == p_nom);
 	POSTCONDITION(m_dateNaissance == p_dateNaissance);
+
 	void asgAdresse();
 	void asgNas();
 	void asgPrenom();

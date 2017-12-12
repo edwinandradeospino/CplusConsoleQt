@@ -11,6 +11,8 @@
 #include"Adresse.h"
 #include "PersonneException.h"
 #include <string>
+#include "Personne.h"
+#include <vector>
 
 using namespace std;
 
@@ -97,54 +99,56 @@ std::string Circonscription::reqCirconscriptionFormate() const {
  * par: objet personne.
  *
  */
+/*
+bool Circonscription::personneEstDejaPresente(const std::string& p_nas) const {
+	bool personnePresent=false;
+		std::vector<elections::Personne *>::const_iterator it;
+		for(it = m_vInscrits.begin();it < m_vInscrits.end(); it++)
+		{
+		    if((*it)->reqNas()== p_nas)
+		    {
+		    	personnePresent=true;
+		    }
+		}
+	return true;
+}
+*/
+
 
 void Circonscription::inscrire(const Personne& p_nouvelInscrit) {
 	//Verifier si l'employe est present
 	try{
-		if(personneEstDejaPresente(p_nouvelInscrit.reqNas()))
+		if(!personneEstDejaPresente(p_nouvelInscrit.reqNas()))
 		{
 		    throw PersonneDejaPresentException(p_nouvelInscrit.reqPersonneFormate());
 		}
 		m_vInscrits.push_back(p_nouvelInscrit.clone());
+	} catch (PersonneDejaPresentException& e) {
+
 	}
-	catch(elections::PersonneDejaPresentException& e) {}
 }
 
-void Circonscription::desinscrire(const std::string& p_nas)
+
+void Circonscription::desinscrire(const std::string p_nas)
 {
 	try{
 		if(!personneEstDejaPresente(p_nas))
 		{
-			throw PersonneAbsenteException(p_nas+" n'est pas dans la liste");
+			throw PersonneAbsenteException(" n'est pas dans la liste");
 		}
 
 		std::vector<elections::Personne *>::const_iterator it;
-		for(it=m_vInscrits.begin();it<m_vInscrits.end();it++)
+		for(it = m_vInscrits.begin();it<m_vInscrits.end(); it++)
 		{
-		    if((*it)->reqNas()==p_nas)
+		    if((*it)->reqNas() == p_nas)
 		    {
 		    	delete (*it);
 				m_vInscrits.erase(it);
 		    }
 		}
 	}
-	catch(elections::PersonneAbsenteException& e){}
+	catch(PersonneAbsenteException& e){}
 }
-
-bool Circonscription::personneEstDejaPresente(const std::string& p_nas)const
-{
-	bool personnePresent=false;
-	std::vector<elections::Personne *>::const_iterator it;
-	for(it=m_vInscrits.begin();it<m_vInscrits.end();it++)
-	{
-	    if((*it)->reqNas()==p_nas)
-	    {
-	    	personnePresent=true;
-	    }
-	}
-	return personnePresent;
-}
-
 } // fin du namespace
 
 

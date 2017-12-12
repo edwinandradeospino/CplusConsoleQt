@@ -2,12 +2,18 @@ TEMPLATE = app
 TARGET = Formulaire
 QT += core \
     gui
-HEADERS += candidatinscriptions.h \
+HEADERS += electeurinscrits.h \
+    supprimerpersonne.h \
+    candidatinscriptions.h \
     formulaire.h
-SOURCES += candidatinscriptions.cpp \
+SOURCES += electeurinscrits.cpp \
+    supprimerpersonne.cpp \
+    candidatinscriptions.cpp \
     main.cpp \
     formulaire.cpp
-FORMS += candidatinscriptions.ui \
+FORMS += electeurinscrits.ui \
+    supprimerpersonne.ui \
+    candidatinscriptions.ui \
     formulaire.ui
 RESOURCES += 
 LIBS += "../Source/Debug/libSource.a"

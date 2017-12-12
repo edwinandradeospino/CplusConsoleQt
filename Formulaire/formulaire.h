@@ -6,6 +6,7 @@
 #include "Personne.h"
 #include "Candidat.h"
 #include "Adresse.h"
+#include "Date.h"
 #include <string>
 #include <vector>
 
@@ -18,19 +19,27 @@ class Formulaire : public QMainWindow
 public:
     Formulaire(QWidget *parent = 0);
     ~Formulaire();
+
     void ajouterCandidat(const std::string& p_nas,
-    		const std::string& p_prenom,
-    		const std::string& p_nom,
-    		const util::Date& p_dateNaissance,
-    		const util::Adresse& p_adresse,
-    		int p_parti);
+        		const std::string& p_prenom,
+        		const std::string& p_nom,
+        		const util::Date& p_dateNaissance,
+        		const util::Adresse& p_adresse,
+        		int p_parti);
+    bool verifiePersonneAjoute(const elections::Personne& p_personne);
+
 
 private slots:
-	void dialogCandidat();
+	void dialogAjouterCandidat();
+	void selectionLineTable();
+	void supprimerCandidat();
 
 private:
     Ui::FormulaireClass ui;
-    std::vector<Personne*> m_vPersonne;
+    std::vector<elections::Personne*> m_vPersonne;
+    void sauvegarderDonnees();
+    bool personneEstDejaPresente(const std::string& p_nas) const;
+    void listePersonnes();
 };
 
 #endif // FORMULAIRE_H

@@ -10,6 +10,7 @@
 #include"Candidat.h"
 #include<vector>
 #include"Adresse.h"
+#include "Personne.h"
 
 namespace elections {
 
@@ -21,8 +22,8 @@ public:
 	Candidat reqDeputeElu() const;
 	std::string reqCirconscriptionFormate() const;
 	void inscrire(const Personne& p_nouvelInscrit);
-	void desinscrire(const std::string& p_nas);
-	bool personneEstDejaPresente(const std::string& p_nas)const;
+	void desinscrire(const std::string p_nas);
+	bool personneEstDejaPresente(const std::string& p_nas) const;
 
 private:
 	std::string m_nom;

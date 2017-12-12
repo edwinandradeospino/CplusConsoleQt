@@ -1,5 +1,6 @@
 Circonscription.o: ../Circonscription.cpp ../Circonscription.h \
- ../Candidat.h ../Personne.h ../Date.h ../ContratException.h ../Adresse.h
+ ../Candidat.h ../Personne.h ../Date.h ../ContratException.h ../Adresse.h \
+ ../PersonneException.h
 
 ../Circonscription.h:
 
@@ -12,3 +13,5 @@ Circonscription.o: ../Circonscription.cpp ../Circonscription.h \
 ../ContratException.h:
 
 ../Adresse.h:
+
+../PersonneException.h:
