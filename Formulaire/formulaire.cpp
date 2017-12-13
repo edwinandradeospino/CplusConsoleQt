@@ -1,5 +1,6 @@
 #include "formulaire.h"
 #include "candidatinscriptions.h"
+#include "electeurinscrits.h"
 #include "PersonneException.h"
 #include "Circonscription.h"
 #include <QMessageBox>
@@ -12,15 +13,20 @@ Formulaire::Formulaire(QWidget *parent)
     : QMainWindow(parent)
 {
 	ui.setupUi(this);
-	ui.tableWidget->setColumnWidth(0, 100);
-	ui.tableWidget->setColumnWidth(1,100);
-	ui.tableWidget->setColumnWidth(2,180);
+	ui.tableWidget->setColumnWidth(0, 80);
+	ui.tableWidget->setColumnWidth(1,80);
+	ui.tableWidget->setColumnWidth(2,220);
 	QObject::connect(ui.pushButton,SIGNAL(clicked()),this,SLOT(close()));
 	QObject::connect(ui.actionQuitter ,SIGNAL(triggered()), this, SLOT(close()));
 	QObject::connect(ui.actionInscription_d_un_Candidat_2, SIGNAL(triggered()), SLOT(dialogAjouterCandidat()));
 	QObject::connect(ui.actionDesinscription_d_une_Personne,SIGNAL(triggered()), this, SLOT(supprimerCandidat()));
+	QObject::connect(ui.actionInscription_d_un_Electeur, SIGNAL(triggered()), SLOT(dialogAjouterElecteur()));
 }
 
+/**
+* \ brief
+* \
+*/
 Formulaire::~Formulaire()
 {
 	sauvegarderDonnees();
@@ -29,16 +35,15 @@ Formulaire::~Formulaire()
 	}
 }
 
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::dialogAjouterCandidat(){
 
 	CandidatInscriptions saisieCandidat(this);
 
 	if (saisieCandidat.exec()){
-
-//    objeto de prueba
-//		ajouterCandidat("prenom","nom","046 454 385", util::Date(2,2,1980),
-//				util::Adresse(12,"rue","g3g","qc","qc"),1);
 
 		ajouterCandidat(saisieCandidat.reqNom().toStdString(),
 				saisieCandidat.reqPrenom().toStdString(),
@@ -55,7 +60,10 @@ void Formulaire::dialogAjouterCandidat(){
 		ui.tableWidget->setItem(nombreDeLigne, 2, new QTableWidgetItem(date));
 	}
 }
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::ajouterCandidat(const std::string& p_nas,
         		const std::string& p_prenom,
         		const std::string& p_nom,
@@ -67,7 +75,7 @@ void Formulaire::ajouterCandidat(const std::string& p_nas,
 				elections::Candidat AutreCandidat(p_nom, p_prenom, p_nas,
 						p_dateNaissance,p_adresse,p_parti);
 				if (personneEstDejaPresente(p_nas)){
-					throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
+				//	throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
 					m_vPersonne.push_back(new Candidat(AutreCandidat));
 				}
 			} catch (PersonneDejaPresentException& e) {
@@ -76,7 +84,57 @@ void Formulaire::ajouterCandidat(const std::string& p_nas,
 			}
 
 }
+/**
+* \ brief
+* \
+*/
+void Formulaire::dialogAjouterElecteur(){
 
+	ElecteurInscrits saisieElecteur(this);
+
+	if (saisieElecteur.exec()){
+
+		ajouterElecteur(saisieElecteur.reqNom().toStdString(),
+				saisieElecteur.reqPrenom().toStdString(),
+				saisieElecteur.reqNas().toStdString(),
+				saisieElecteur.reqDateNaissance(),
+				saisieElecteur.reqAdresseqt());
+
+		int nombreDeLigne = ui.tableWidget->rowCount();
+		QString date = QString::fromStdString(saisieElecteur.reqDateNaissance().reqDateFormatee());
+		ui.tableWidget->setRowCount(nombreDeLigne + 1);
+		ui.tableWidget->setItem(nombreDeLigne, 0, new QTableWidgetItem(saisieElecteur.reqNom()));
+		ui.tableWidget->setItem(nombreDeLigne, 1, new QTableWidgetItem(saisieElecteur.reqPrenom()));
+		ui.tableWidget->setItem(nombreDeLigne, 2, new QTableWidgetItem(date));
+	}
+}
+/**
+* \ brief
+* \
+*/
+void Formulaire::ajouterElecteur(const std::string& p_nas,
+        		const std::string& p_prenom,
+        		const std::string& p_nom,
+        		const util::Date& p_dateNaissance,
+				const util::Adresse& p_adresse){
+
+			try {
+				elections::Electeur AutreElecteur(p_nom, p_prenom, p_nas,
+						p_dateNaissance,p_adresse);
+				if (personneEstDejaPresente(p_nas)){
+				//	throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
+					m_vPersonne.push_back(new Electeur(AutreElecteur));
+				}
+			} catch (PersonneDejaPresentException& e) {
+				QString message = e.what();
+				QMessageBox::information(this,"Erreur", message);
+			}
+
+}
+/**
+* \ brief
+* \
+*/
 bool Formulaire::personneEstDejaPresente(const std::string& p_nas) const {
 	bool personnePresent=false;
 	std::vector<elections::Personne *>::const_iterator it;
@@ -89,14 +147,16 @@ bool Formulaire::personneEstDejaPresente(const std::string& p_nas) const {
 		}
 	return true;
 }
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::selectionLineTable(){
 
 	int ligne = ui.tableWidget->currentRow();
 	QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
 	QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
-	std::vector<Personne*>::iterator iter;
-//ici il y a une erreur. ne permet pas d'afficher dans le text browser.
+	std::vector<Personne*>::const_iterator iter;
 	for (iter = m_vPersonne.begin(); iter < m_vPersonne.end(); iter++) {
 		if ((*iter)->reqNom() == (*tNom).text().toStdString() &&
 			(*iter)->reqPrenom() == (*tPrenom).text().toStdString()) {
@@ -104,7 +164,10 @@ void Formulaire::selectionLineTable(){
 		}
 	}
 }
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::sauvegarderDonnees() {
 	//initialisatioin du file
 	QFile file("Sauveur.txt");
@@ -120,7 +183,10 @@ void Formulaire::sauvegarderDonnees() {
 		flux << m_vPersonne[i]->reqPersonneFormate().c_str();
 	}
 }
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::supprimerCandidat(){
 	SupprimerPersonne suppressioinPersonne(this);
 	if (suppressioinPersonne.exec()) {
@@ -128,7 +194,7 @@ void Formulaire::supprimerCandidat(){
 		for (it = m_vPersonne.begin(); it < m_vPersonne.end(); it++){
 			if ((*it)->reqNom() == suppressioinPersonne.reqNom().toStdString() &&
 				(*it)->reqPrenom() == suppressioinPersonne.reqPrenom().toStdString()){
-				//delete le lick
+				//delete le leck de la memoire
 				delete(*it);
 				//delete la donnée du vector
 				it = m_vPersonne.erase(it);
@@ -138,7 +204,10 @@ void Formulaire::supprimerCandidat(){
 		listePersonnes();
 	}
 }
-
+/**
+* \ brief
+* \
+*/
 void Formulaire::listePersonnes() {
 	// on efface tous le lignes de l'affichage de la liste
 	int nbLigne = ui.tableWidget->rowCount();

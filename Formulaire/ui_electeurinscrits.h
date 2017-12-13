@@ -20,7 +20,6 @@
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
-#include <QtGui/QSpinBox>
 
 QT_BEGIN_NAMESPACE
 
@@ -41,8 +40,6 @@ public:
     QLineEdit *lineEdit_8;
     QLabel *label_4;
     QLineEdit *lineEdit_9;
-    QLabel *label_6;
-    QSpinBox *spinBox;
     QLabel *label_9;
     QLabel *label_12;
     QLabel *label_10;
@@ -107,13 +104,6 @@ public:
         lineEdit_9 = new QLineEdit(ElecteurInscritsClass);
         lineEdit_9->setObjectName(QString::fromUtf8("lineEdit_9"));
         lineEdit_9->setGeometry(QRect(360, 240, 61, 27));
-        label_6 = new QLabel(ElecteurInscritsClass);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(500, 130, 91, 17));
-        spinBox = new QSpinBox(ElecteurInscritsClass);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(500, 150, 49, 27));
-        spinBox->setMaximum(4);
         label_9 = new QLabel(ElecteurInscritsClass);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setGeometry(QRect(140, 220, 31, 17));
@@ -155,7 +145,6 @@ public:
         label_8->setText(QApplication::translate("ElecteurInscritsClass", "No. civique", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("ElecteurInscritsClass", "Adresse ", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ElecteurInscritsClass", "Date de Naissance", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("ElecteurInscritsClass", "Parti Politique", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("ElecteurInscritsClass", "Rue", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("ElecteurInscritsClass", "Province", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("ElecteurInscritsClass", "Code Postal", 0, QApplication::UnicodeUTF8));

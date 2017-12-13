@@ -9,7 +9,7 @@ CandidatInscriptions::CandidatInscriptions(QWidget *parent)
 	//pour charger la date courrant dans la class
 	ui.dateEdit->setDate(QDate::currentDate());
 	// connexion pour le bouton close
-//	QObject::connect(ui.pushButton_3,SIGNAL(clicked()), this, SLOT(close()));
+	QObject::connect(ui.pushButton_3,SIGNAL(clicked()), this, SLOT(close()));
 	// connexion pour ver la fenetre principale.
 	QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(validerCandidat()));
 

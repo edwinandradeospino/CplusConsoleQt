@@ -5,6 +5,7 @@
 #include "ui_formulaire.h"
 #include "Personne.h"
 #include "Candidat.h"
+#include "Electeur.h"
 #include "Adresse.h"
 #include "Date.h"
 #include <string>
@@ -26,11 +27,17 @@ public:
         		const util::Date& p_dateNaissance,
         		const util::Adresse& p_adresse,
         		int p_parti);
+    void ajouterElecteur(const std::string& p_nas,
+            		const std::string& p_prenom,
+            		const std::string& p_nom,
+            		const util::Date& p_dateNaissance,
+            		const util::Adresse& p_adresse);
     bool verifiePersonneAjoute(const elections::Personne& p_personne);
 
 
 private slots:
 	void dialogAjouterCandidat();
+	void dialogAjouterElecteur();
 	void selectionLineTable();
 	void supprimerCandidat();
 

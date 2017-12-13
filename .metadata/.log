@@ -1702,3 +1702,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.pa
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-12-12 15:48:09.629
 !MESSAGE Indexed 'Formulaire' (9 sources, 700 headers) in 9,84 sec: 77 561 declarations; 111 177 references; 2 unresolved inclusions; 3 syntax errors; 43 unresolved names (0,023 %)
+!SESSION 2017-12-13 00:13:42.568 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product -data .
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-12-13 00:53:34.518
+!MESSAGE Indexed 'Formulaire' (10 sources, 702 headers) in 22,9 sec: 77 666 declarations; 112 056 references; 1 unresolved inclusions; 3 syntax errors; 41 unresolved names (0,022 %)

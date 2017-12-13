@@ -452,8 +452,8 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>571</width>
-      <height>301</height>
+      <width>421</width>
+      <height>171</height>
      </rect>
     </property>
     <property name="alternatingRowColors">
@@ -483,7 +483,7 @@
     </column>
     <column>
      <property name="text">
-      <string>Adresse</string>
+      <string>Date Naissance</string>
      </property>
      <property name="textAlignment">
       <set>AlignHCenter|AlignVCenter|AlignCenter</set>
@@ -493,11 +493,16 @@
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>460</x>
       <y>20</y>
-      <width>151</width>
+      <width>301</width>
       <height>171</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
    </widget>
   </widget>

@@ -159,13 +159,16 @@ public:
         __qtablewidgetitem2->setTextAlignment(Qt::AlignHCenter|Qt::AlignVCenter|Qt::AlignCenter);
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(30, 20, 571, 301));
+        tableWidget->setGeometry(QRect(30, 20, 421, 171));
         tableWidget->setAlternatingRowColors(true);
         tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
         tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
         textBrowser = new QTextBrowser(centralwidget);
         textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(610, 20, 151, 171));
+        textBrowser->setGeometry(QRect(460, 20, 301, 171));
+        QFont font3;
+        font3.setPointSize(9);
+        textBrowser->setFont(font3);
         FormulaireClass->setCentralWidget(centralwidget);
         menubar = new QMenuBar(FormulaireClass);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -208,7 +211,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
         ___qtablewidgetitem1->setText(QApplication::translate("FormulaireClass", "Prenom", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("FormulaireClass", "Adresse", 0, QApplication::UnicodeUTF8));
+        ___qtablewidgetitem2->setText(QApplication::translate("FormulaireClass", "Date Naissance", 0, QApplication::UnicodeUTF8));
         menuMenu->setTitle(QApplication::translate("FormulaireClass", "Operations", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

@@ -4528,3 +4528,713 @@ make -f Makefile.Debug
 make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
 make[1]: rien à faire pour « first ».
 make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:19:53 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+00:19:53 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:23:15 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+00:23:16 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/candidatinscriptions.o candidatinscriptions.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:58:13 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+00:58:13 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+/usr/lib/i386-linux-gnu/qt4/bin/uic electeurinscrits.ui -o ui_electeurinscrits.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/electeurinscrits.o electeurinscrits.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:127:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. electeurinscrits.h -o debug/moc_electeurinscrits.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/moc_electeurinscrits.o debug/moc_electeurinscrits.cpp
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. formulaire.h -o debug/moc_formulaire.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/moc_formulaire.o debug/moc_formulaire.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:58:34 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+00:58:35 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:05:17 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:05:17 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/electeurinscrits.o electeurinscrits.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:05:22 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:05:23 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:16:55 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:16:55 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/electeurinscrits.o electeurinscrits.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/supprimerpersonne.o supprimerpersonne.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:37: error: expected ‘;’ before ‘endl’
+ std::cout << "aqui va" << std::cout endl << std::cout endl;
+                                     ^
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1]: *** [debug/formulaire.o] Erreur 1
+make: *** [debug] Erreur 2
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+Makefile:50 : la recette pour la cible « debug » a échouée
+01:17:20 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:17:20 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:31: error: expected primary-expression before ‘endl’
+ std::cout << "aqui va" << std endl << std endl;
+                               ^
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: *** [debug/formulaire.o] Erreur 1
+make: *** [debug] Erreur 2
+Makefile:50 : la recette pour la cible « debug » a échouée
+01:17:36 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:17:36 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:17:41 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:17:41 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:18:44 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:18:45 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:18:48 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:18:49 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:19:41 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:19:41 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:19:47 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:19:47 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:19:49 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:19:49 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:21:37 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:21:37 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:21:41 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:21:41 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:23:13 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:23:13 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+formulaire.cpp: At global scope:
+formulaire.cpp:169:1: error: expected declaration before ‘}’ token
+ }
+ ^
+make[1]: *** [debug/formulaire.o] Erreur 1
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make: *** [debug] Erreur 2
+Makefile:50 : la recette pour la cible « debug » a échouée
+01:23:19 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:23:19 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+formulaire.cpp: At global scope:
+formulaire.cpp:169:1: error: expected declaration before ‘}’ token
+ }
+ ^
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1]: *** [debug/formulaire.o] Erreur 1
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+Makefile:50 : la recette pour la cible « debug » a échouée
+make: *** [debug] Erreur 2
+01:23:52 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:23:52 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:23:56 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:23:57 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:24:03 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:24:03 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:24:06 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:24:06 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:26:10 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:26:10 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+formulaire.cpp: At global scope:
+formulaire.cpp:169:1: error: expected declaration before ‘}’ token
+ }
+ ^
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: *** [debug/formulaire.o] Erreur 1
+Makefile:50 : la recette pour la cible « debug » a échouée
+make: *** [debug] Erreur 2
+01:26:13 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:26:13 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+formulaire.cpp: At global scope:
+formulaire.cpp:169:1: error: expected declaration before ‘}’ token
+ }
+ ^
+make[1]: *** [debug/formulaire.o] Erreur 1
+Makefile.Debug:221 : la recette pour la cible « debug/formulaire.o » a échouée
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+Makefile:50 : la recette pour la cible « debug » a échouée
+make: *** [debug] Erreur 2
+01:26:49 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:26:49 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:26:55 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:26:56 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:28:04 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:28:04 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:28:08 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:28:08 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:30:32 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:30:32 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:30:35 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:30:35 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:31:37 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:31:37 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+formulaire.cpp: In member function ‘void Formulaire::selectionLineTable()’:
+formulaire.cpp:157:20: warning: unused variable ‘tNom’ [-Wunused-variable]
+  QTableWidgetItem *tNom = ui.tableWidget->item(ligne, 0);
+                    ^
+formulaire.cpp:158:20: warning: unused variable ‘tPrenom’ [-Wunused-variable]
+  QTableWidgetItem *tPrenom = ui.tableWidget->item(ligne, 1);
+                    ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:31:40 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:31:41 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:31:46 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:31:46 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:31:48 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:31:48 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:33:52 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:33:53 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:33:56 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:33:56 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:34:54 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:34:54 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:34:58 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:34:59 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:36:27 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:36:27 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+/usr/lib/i386-linux-gnu/qt4/bin/uic formulaire.ui -o ui_formulaire.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. formulaire.h -o debug/moc_formulaire.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/moc_formulaire.o debug/moc_formulaire.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:36:34 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:36:34 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:38:16 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:38:16 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+/usr/lib/i386-linux-gnu/qt4/bin/uic formulaire.ui -o ui_formulaire.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. formulaire.h -o debug/moc_formulaire.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/moc_formulaire.o debug/moc_formulaire.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:38:30 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:38:30 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:41:54 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:41:55 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:42:04 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:42:04 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:42:07 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:42:07 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:42:17 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:42:18 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+/usr/lib/i386-linux-gnu/qt4/bin/uic formulaire.ui -o ui_formulaire.h
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/main.o main.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+/usr/lib/i386-linux-gnu/qt4/bin/moc -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. formulaire.h -o debug/moc_formulaire.cpp
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/moc_formulaire.o debug/moc_formulaire.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:44:36 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:44:37 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+formulaire.cpp: In member function ‘bool Formulaire::personneEstDejaPresente(const string&) const’:
+formulaire.cpp:139:7: warning: variable ‘personnePresent’ set but not used [-Wunused-but-set-variable]
+  bool personnePresent=false;
+       ^
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+01:45:10 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+01:45:10 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
