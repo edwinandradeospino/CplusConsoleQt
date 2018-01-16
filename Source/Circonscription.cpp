@@ -13,6 +13,7 @@
 #include <string>
 #include "Personne.h"
 #include <vector>
+#include "validationFormat.h"
 
 using namespace std;
 
@@ -43,8 +44,8 @@ Circonscription::Circonscription(const std::string& p_nom, const Candidat& p_dep
  */
 Circonscription::~Circonscription() {
 
-	std::vector<elections::Personne *>::const_iterator it;
-	for(it=m_vInscrits.begin();it<m_vInscrits.end();it++)
+	std::vector<elections::Personne *>::iterator it;
+	for(it = m_vInscrits.begin();it < m_vInscrits.end();it++)
 	{
 	    delete (*it);
 	}
@@ -131,13 +132,14 @@ void Circonscription::inscrire(const Personne& p_nouvelInscrit) {
 
 void Circonscription::desinscrire(const std::string p_nas)
 {
+	PRECONDITION(util::validerNas(p_nas));
 	try{
 		if(!personneEstDejaPresente(p_nas))
 		{
 			throw PersonneAbsenteException(" n'est pas dans la liste");
 		}
 
-		std::vector<elections::Personne *>::const_iterator it;
+		std::vector<elections::Personne *>::iterator it;
 		for(it = m_vInscrits.begin();it<m_vInscrits.end(); it++)
 		{
 		    if((*it)->reqNas() == p_nas)

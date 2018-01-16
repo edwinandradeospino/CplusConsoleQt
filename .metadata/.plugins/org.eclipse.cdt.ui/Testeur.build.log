@@ -1,15 +1,17 @@
-08:46:38 **** Incremental Build of configuration Debug for project Testeur ****
+05:10:39 **** Incremental Build of configuration Debug for project Testeur ****
 make all 
 Building target: Testeur
 Invoking: GCC C++ Linker
 g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+./CirconscriptionTesteur.o : Dans la fonction « CirconscriptionValide_desinscrire_Test::TestBody() » :
+/home/etudiant/Bureau/tps/tp4/Testeur/Debug/../CirconscriptionTesteur.cpp:119 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
 /home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
-/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:106 : référence indéfinie vers « elections::PersonneDejaPresentException::PersonneDejaPresentException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
-/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) » :
-/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:118 : référence indéfinie vers « elections::PersonneAbsenteException::PersonneAbsenteException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
 collect2: error: ld returned 1 exit status
-makefile:44 : la recette pour la cible « Testeur » a échouée
 make: *** [Testeur] Erreur 1
+makefile:44 : la recette pour la cible « Testeur » a échouée
 
-08:46:45 Build Finished (took 6s.712ms)
+05:10:40 Build Finished (took 494ms)
 

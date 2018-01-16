@@ -1,6 +1,16 @@
-01:45:10 **** Incremental Build of configuration Debug for project Source ****
+05:10:32 **** Incremental Build of configuration Debug for project Source ****
 make all 
-make: rien à faire pour « all ».
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+Finished building: ../Circonscription.cpp
+ 
+Building target: libSource.a
+Invoking: GCC Archiver
+ar -r  "libSource.a"  ./Adresse.o ./Candidat.o ./Circonscription.o ./ContratException.o ./Date.o ./Electeur.o ./Personne.o ./validationFormat.o   
+ar: création de libSource.a
+Finished building target: libSource.a
+ 
 
-01:45:10 Build Finished (took 134ms)
+05:10:33 Build Finished (took 1s.52ms)
 

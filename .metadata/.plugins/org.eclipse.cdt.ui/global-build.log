@@ -5238,3 +5238,216 @@ make -f Makefile.Debug
 make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
 make[1]: rien à faire pour « first ».
 make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+03:40:31 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+03:40:31 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+03:40:38 **** Incremental Build of configuration Debug for project Source ****
+make all 
+make: rien à faire pour « all ».
+03:40:39 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:23:27 **** Incremental Build of configuration Debug for project Source ****
+make all 
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+In file included from ../Date.h:10:0,
+                 from ../Personne.h:11,
+                 from ../Candidat.h:10,
+                 from ../Circonscription.h:10,
+                 from ../Circonscription.cpp:7:
+../Circonscription.cpp: In member function ‘void elections::Circonscription::desinscrire(std::__cxx11::string)’:
+../Circonscription.cpp:134:15: error: ‘validerNas’ is not a member of ‘util’
+  PRECONDITION(util::validerNas(p_nas));
+               ^
+../ContratException.h:85:13: note: in definition of macro ‘PRECONDITION’
+       if (!(f)) throw PreconditionException(__FILE__, __LINE__, #f);
+             ^
+subdir.mk:39 : la recette pour la cible « Circonscription.o » a échouée
+make: *** [Circonscription.o] Erreur 1
+00:23:30 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:23:31 **** Incremental Build of configuration Debug for project Testeur ****
+make all 
+Building file: ../CirconscriptionTesteur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/home/etudiant/Bureau/tps/tp4/Source" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CirconscriptionTesteur.d" -MT"CirconscriptionTesteur.o" -o "CirconscriptionTesteur.o" "../CirconscriptionTesteur.cpp"
+Finished building: ../CirconscriptionTesteur.cpp
+ 
+Building target: Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+/usr/bin/ld : ne peut trouver -lSource
+collect2: error: ld returned 1 exit status
+make: *** [Testeur] Erreur 1
+makefile:44 : la recette pour la cible « Testeur » a échouée
+00:25:14 **** Incremental Build of configuration Debug for project Source ****
+make all 
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+In file included from ../Date.h:10:0,
+                 from ../Personne.h:11,
+                 from ../Candidat.h:10,
+                 from ../Circonscription.h:10,
+                 from ../Circonscription.cpp:7:
+../Circonscription.cpp: In member function ‘void elections::Circonscription::desinscrire(std::__cxx11::string)’:
+../Circonscription.cpp:134:15: error: ‘validerNas’ is not a member of ‘util’
+  PRECONDITION(util::validerNas(p_nas));
+               ^
+../ContratException.h:85:13: note: in definition of macro ‘PRECONDITION’
+       if (!(f)) throw PreconditionException(__FILE__, __LINE__, #f);
+             ^
+subdir.mk:39 : la recette pour la cible « Circonscription.o » a échouée
+make: *** [Circonscription.o] Erreur 1
+00:25:15 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:25:16 **** Incremental Build of configuration Debug for project Testeur ****
+make all 
+Building target: Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+/usr/bin/ld : ne peut trouver -lSource
+collect2: error: ld returned 1 exit status
+makefile:44 : la recette pour la cible « Testeur » a échouée
+make: *** [Testeur] Erreur 1
+00:28:01 **** Incremental Build of configuration Debug for project Source ****
+make all 
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+Finished building: ../Circonscription.cpp
+ 
+Building target: libSource.a
+Invoking: GCC Archiver
+ar -r  "libSource.a"  ./Adresse.o ./Candidat.o ./Circonscription.o ./ContratException.o ./Date.o ./Electeur.o ./Personne.o ./validationFormat.o   
+ar: création de libSource.a
+Finished building target: libSource.a
+ 
+00:28:02 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:28:03 **** Incremental Build of configuration Debug for project Testeur ****
+make all 
+Building target: Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+./CirconscriptionTesteur.o : Dans la fonction « CirconscriptionValide_desinscrire_Test::TestBody() » :
+/home/etudiant/Bureau/tps/tp4/Testeur/Debug/../CirconscriptionTesteur.cpp:119 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+collect2: error: ld returned 1 exit status
+make: *** [Testeur] Erreur 1
+makefile:44 : la recette pour la cible « Testeur » a échouée
+00:38:34 **** Incremental Build of configuration Debug for project Source ****
+make all 
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+Finished building: ../Circonscription.cpp
+ 
+Building target: libSource.a
+ar: création de libSource.a
+Invoking: GCC Archiver
+ar -r  "libSource.a"  ./Adresse.o ./Candidat.o ./Circonscription.o ./ContratException.o ./Date.o ./Electeur.o ./Personne.o ./validationFormat.o   
+Finished building target: libSource.a
+ 
+00:38:35 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+make[1]: rien à faire pour « first ».
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+00:38:36 **** Incremental Build of configuration Debug for project Testeur ****
+make all 
+Building target: Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+./CirconscriptionTesteur.o : Dans la fonction « CirconscriptionValide_desinscrire_Test::TestBody() » :
+/home/etudiant/Bureau/tps/tp4/Testeur/Debug/../CirconscriptionTesteur.cpp:119 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+collect2: error: ld returned 1 exit status
+make: *** [Testeur] Erreur 1
+makefile:44 : la recette pour la cible « Testeur » a échouée
+05:10:32 **** Incremental Build of configuration Debug for project Source ****
+make all 
+Building file: ../Circonscription.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Circonscription.d" -MT"Circonscription.o" -o "Circonscription.o" "../Circonscription.cpp"
+Finished building: ../Circonscription.cpp
+ 
+Building target: libSource.a
+Invoking: GCC Archiver
+ar -r  "libSource.a"  ./Adresse.o ./Candidat.o ./Circonscription.o ./ContratException.o ./Date.o ./Electeur.o ./Personne.o ./validationFormat.o   
+ar: création de libSource.a
+Finished building target: libSource.a
+ 
+05:10:33 **** Incremental Build of project Formulaire ****
+make debug 
+make -f Makefile.Debug
+make[1] : on entre dans le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+g++ -c -pipe -g -Wall -W -D_REENTRANT -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I../Source -Idebug -I. -o debug/formulaire.o formulaire.cpp
+g++  -o Formulaire debug/electeurinscrits.o debug/supprimerpersonne.o debug/candidatinscriptions.o debug/main.o debug/formulaire.o debug/moc_electeurinscrits.o debug/moc_supprimerpersonne.o debug/moc_candidatinscriptions.o debug/moc_formulaire.o    -L/usr/lib/i386-linux-gnu ../Source/Debug/libSource.a -lQtGui -lQtCore -lpthread 
+{ test -n "" && DESTDIR="" || DESTDIR=.; } && test $(gdb --version | sed -e 's,[^0-9][^0-9]*\([0-9]\)\.\([0-9]\).*,\1\2,;q') -gt 72 && gdb --nx --batch --quiet -ex 'set confirm off' -ex "save gdb-index $DESTDIR" -ex quit 'Formulaire' && test -f Formulaire.gdb-index && objcopy --add-section '.gdb_index=Formulaire.gdb-index' --set-section-flags '.gdb_index=readonly' 'Formulaire' 'Formulaire' && rm -f Formulaire.gdb-index || true
+make[1] : on quitte le répertoire « /home/etudiant/Bureau/tps/tp4/Formulaire »
+05:10:39 **** Incremental Build of configuration Debug for project Testeur ****
+make all 
+Building target: Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Testeur"  ./AdresseTesteur.o ./CandidatTesteur.o ./CirconscriptionTesteur.o ./ElecteurTesteur.o ./PersonneTesteur.o   -lSource -lgtest_main -lgtest -lpthread
+./CirconscriptionTesteur.o : Dans la fonction « CirconscriptionValide_desinscrire_Test::TestBody() » :
+/home/etudiant/Bureau/tps/tp4/Testeur/Debug/../CirconscriptionTesteur.cpp:119 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+collect2: error: ld returned 1 exit status
+make: *** [Testeur] Erreur 1
+makefile:44 : la recette pour la cible « Testeur » a échouée
+05:10:40 **** Incremental Build of configuration Debug for project Utilisation ****
+make all 
+Building file: ../principal.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/home/etudiant/Bureau/tps/tp4/Source" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"principal.d" -MT"principal.o" -o "principal.o" "../principal.cpp"
+../principal.cpp: In function ‘int main()’:
+../principal.cpp:28:6: warning: variable ‘choix1’ set but not used [-Wunused-but-set-variable]
+ int *choix1, choix1t;
+      ^
+Finished building: ../principal.cpp
+ 
+Building target: Utilisation
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Utilisation"  ./principal.o   -lSource
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+collect2: error: ld returned 1 exit status
+make: *** [Utilisation] Erreur 1
+makefile:44 : la recette pour la cible « Utilisation » a échouée

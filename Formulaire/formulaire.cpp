@@ -75,7 +75,7 @@ void Formulaire::ajouterCandidat(const std::string& p_nas,
 				elections::Candidat AutreCandidat(p_nom, p_prenom, p_nas,
 						p_dateNaissance,p_adresse,p_parti);
 				if (personneEstDejaPresente(p_nas)){
-				//	throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
+					throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
 					m_vPersonne.push_back(new Candidat(AutreCandidat));
 				}
 			} catch (PersonneDejaPresentException& e) {
@@ -122,7 +122,7 @@ void Formulaire::ajouterElecteur(const std::string& p_nas,
 				elections::Electeur AutreElecteur(p_nom, p_prenom, p_nas,
 						p_dateNaissance,p_adresse);
 				if (personneEstDejaPresente(p_nas)){
-				//	throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
+					throw PersonneDejaPresentException("La personne est deja presente dasn la liste.");
 					m_vPersonne.push_back(new Electeur(AutreElecteur));
 				}
 			} catch (PersonneDejaPresentException& e) {
@@ -145,7 +145,7 @@ bool Formulaire::personneEstDejaPresente(const std::string& p_nas) const {
 		    	personnePresent=true;
 		    }
 		}
-	return true;
+	return personnePresent;
 }
 /**
 * \ brief

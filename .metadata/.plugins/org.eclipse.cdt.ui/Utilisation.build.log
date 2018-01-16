@@ -1,15 +1,24 @@
-08:46:45 **** Incremental Build of configuration Debug for project Utilisation ****
+05:10:40 **** Incremental Build of configuration Debug for project Utilisation ****
 make all 
+Building file: ../principal.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/home/etudiant/Bureau/tps/tp4/Source" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"principal.d" -MT"principal.o" -o "principal.o" "../principal.cpp"
+../principal.cpp: In function ‘int main()’:
+../principal.cpp:28:6: warning: variable ‘choix1’ set but not used [-Wunused-but-set-variable]
+ int *choix1, choix1t;
+      ^
+Finished building: ../principal.cpp
+ 
 Building target: Utilisation
 Invoking: GCC C++ Linker
 g++ -L"/home/etudiant/Bureau/tps/tp4/Source/Debug" -o "Utilisation"  ./principal.o   -lSource
 /home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::inscrire(elections::Personne const&) » :
-/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:106 : référence indéfinie vers « elections::PersonneDejaPresentException::PersonneDejaPresentException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
-/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) » :
-makefile:44 : la recette pour la cible « Utilisation » a échouée
-/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:118 : référence indéfinie vers « elections::PersonneAbsenteException::PersonneAbsenteException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:122 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
+/home/etudiant/Bureau/tps/tp4/Source/Debug/libSource.a(Circonscription.o) : Dans la fonction « elections::Circonscription::desinscrire(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) » :
+/home/etudiant/Bureau/tps/tp4/Source/Debug/../Circonscription.cpp:137 : référence indéfinie vers « elections::Circonscription::personneEstDejaPresente(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const »
 collect2: error: ld returned 1 exit status
 make: *** [Utilisation] Erreur 1
+makefile:44 : la recette pour la cible « Utilisation » a échouée
 
-08:46:45 Build Finished (took 706ms)
+05:10:41 Build Finished (took 1s.43ms)
 
